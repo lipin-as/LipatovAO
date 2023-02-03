@@ -34,7 +34,7 @@ $mail->Body    = '' .$name . ' оставил заявку, его телефо�
 $mail->AltBody = '';
 
 if(!$mail->send()) {
-    echo 'Error';
+    header('location: error.html');
 } else {
     header('location: thank-you.html');
 }
